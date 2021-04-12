@@ -32,6 +32,14 @@ are supported.  SFTP client and server mode are both supported too.
 
 To install the development version, ``pip install -e
 git+https://github.com/paramiko/paramiko/#egg=paramiko``.
+
+This build is built on top of https://github.com/paramiko/paramiko with some new 
+feature prs not merged yet. And it is most likely a temperory solution for 
+access these new features easily.
+
+You can reach https://github.com/liangxiao1/paramiko/tree/xiliang for more details.
+
+PR#1643: Add rsa-sha2-256 and rsa-sha2-512 algorithms
 """
 
 
@@ -58,7 +66,7 @@ for subdeps in extras_require.values():
 extras_require["all"] = everything
 
 setup(
-    name="paramiko",
+    name="paramiko-fork",
     version=version,
     description="SSH2 protocol library",
     long_description=longdesc,
